@@ -94,6 +94,7 @@ const deleteUserById = async (req, res) => {
 };
 
 const addition = () => {
+  console.log("djnv adkjfn")
   return "HELLO WORLD";
 };
 
