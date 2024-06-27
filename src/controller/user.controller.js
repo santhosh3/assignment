@@ -58,12 +58,10 @@ const updateUserById = async (req, res) => {
     }
 
     const { id, createdAt, updatedAt } = updatedUser;
-    return res
-      .status(200)
-      .json({
-        status: "success",
-        data: { id, userName, email, createdAt, updatedAt },
-      });
+    return res.status(200).json({
+      status: "success",
+      data: { id, userName, email, createdAt, updatedAt },
+    });
   } catch (error) {
     return res.status(500).json({ status: "failure", error: error.message });
   }
@@ -93,6 +91,10 @@ const deleteUserById = async (req, res) => {
   } catch (error) {
     res.status(500).json({ status: "failure", message: error.message });
   }
+};
+
+const addition = () => {
+  return "HELLO WORLD";
 };
 
 module.exports = {
